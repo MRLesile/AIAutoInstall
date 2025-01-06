@@ -1,0 +1,12 @@
+quart==0.18.4
+quart-cors==0.7.0
+chromadb==0.4.22
+jieba==0.42.1
+rank_bm25==0.2.2
+numpy==1.24.3
+aiohttp==3.9.1
+requests==2.31.0
+python-dotenv==1.0.0
+--extra-index-url https://download.pytorch.org/whl/cu122
+torch>=2.2.0+cu122
+transformers>=4.6.0
