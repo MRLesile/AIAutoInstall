@@ -1,0 +1,20 @@
+[Unit]
+Description=Digital Textbook Service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu  # Ubuntu默认用户
+WorkingDirectory=/home/ubuntu/pythonProject
+Environment="PYTHONPATH=/home/ubuntu/pythonProject"
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/usr/bin/python3 run.py
+Restart=always
+RestartSec=10
+
+# 日志配置
+StandardOutput=append:/var/log/digital-textbook/access.log
+StandardError=append:/var/log/digital-textbook/error.log
+
+[Install]
+WantedBy=multi-user.target 
